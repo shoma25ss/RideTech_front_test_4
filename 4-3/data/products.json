@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "ノートPC 13\"",
+    "price": 128000,
+    "image": "img/product-1.jpg",
+    "category": "PC",
+    "rating": 4.6,
+    "description": "持ち運びに最適な軽量ノート。学習や開発の入門にも。"
+  },
+  {
+    "id": 2,
+    "name": "ワイヤレスマウス",
+    "price": 3980,
+    "image": "img/product-2.jpg",
+    "category": "Accessory",
+    "rating": 4.2,
+    "description": "静音クリックと長寿命バッテリー。左右対称。"
+  },
+  {
+    "id": 3,
+    "name": "メカニカルキーボード",
+    "price": 12480,
+    "image": "img/product-3.jpg",
+    "category": "Accessory",
+    "rating": 4.8,
+    "description": "打鍵感と静音性のバランスに優れた赤軸モデル。"
+  },
+  {
+    "id": 4,
+    "name": "4K モニター 27\"",
+    "price": 39800,
+    "image": "img/product-4.jpg",
+    "category": "Display",
+    "rating": 4.4,
+    "description": "広色域で写真や動画編集に最適。USB-C 給電対応。"
+  },
+  {
+    "id": 5,
+    "name": "USB-C ドック",
+    "price": 6980,
+    "image": "img/product-5.jpg",
+    "category": "Accessory",
+    "rating": 4.1,
+    "description": "映像出力・有線LAN・SDカード対応の多機能ドック。"
+  },
+  {
+    "id": 6,
+    "name": "ノイズキャンセリングヘッドホン",
+    "price": 24800,
+    "image": "img/product-6.jpg",
+    "category": "Audio",
+    "rating": 4.7,
+    "description": "長時間装着でも疲れにくい軽量設計。マルチポイント対応。"
+  }
+]

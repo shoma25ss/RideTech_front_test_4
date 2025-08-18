@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Async Mart｜非同期処理テスト</title>
+    <meta
+      name="description"
+      content="fetch + async/await を用いた非同期処理テスト用サンプルサイト"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Async Mart</h1>
+        <p class="tagline">JSON を読み込んで動的に表示するミニカタログ</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section aria-labelledby="sec-products" class="section">
+        <h2 id="sec-products" class="section-title">商品一覧</h2>
+
+        <!-- 状態メッセージ：読み上げ用 -->
+        <div
+          id="status"
+          class="visually-hidden"
+          aria-live="polite"
+          aria-atomic="true"
+        ></div>
+
+        <!-- エラー表示 -->
+        <div id="error" class="notice notice-error hidden">
+          <p class="notice-text">
+            データの取得に失敗しました。ネットワークをご確認のうえ、再試行してください。
+          </p>
+          <button id="retry" class="btn btn-outline" type="button">
+            再試行
+          </button>
+        </div>
+
+        <!-- エンプティ表示 -->
+        <div id="empty" class="notice hidden">
+          <p class="notice-text">該当する商品がありません。</p>
+        </div>
+
+        <!-- ローディング（スケルトン） -->
+        <div id="loading" class="grid grid-3 skeletons">
+          <div class="card skeleton-card"></div>
+          <div class="card skeleton-card"></div>
+          <div class="card skeleton-card"></div>
+        </div>
+
+        <!-- 一覧 -->
+        <ul id="list" class="grid grid-3 card-list"></ul>
+      </section>
+
+      <section aria-labelledby="sec-contact" class="section">
+        <h2 id="sec-contact" class="section-title">お問い合わせ</h2>
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="field">
+            <label for="name">お名前</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="email">メールアドレス</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">送信</button>
+          </div>
+          <p
+            id="contact-result"
+            class="notice-text"
+            aria-live="polite"
+            aria-atomic="true"
+          ></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- 詳細モーダルのルート -->
+    <div id="modal-root"></div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <small>&copy; 2025 Async Mart</small>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+[
+  {
+    "productId": 1,
+    "author": "Tanaka",
+    "comment": "出先での勉強に最適。バッテリーも満足。",
+    "stars": 5
+  },
+  {
+    "productId": 1,
+    "author": "Suzuki",
+    "comment": "軽くて静か。画面がもう少し明るいと嬉しい。",
+    "stars": 4
+  },
+  {
+    "productId": 3,
+    "author": "Yamada",
+    "comment": "タイピングが快適。配列も素直で使いやすい。",
+    "stars": 5
+  },
+  {
+    "productId": 4,
+    "author": "Sato",
+    "comment": "色が綺麗。USB-C一本で繋げられて便利。",
+    "stars": 4
+  },
+  {
+    "productId": 6,
+    "author": "Kato",
+    "comment": "遮音性が高く集中できる。音質も満足。",
+    "stars": 5
+  }
+]
