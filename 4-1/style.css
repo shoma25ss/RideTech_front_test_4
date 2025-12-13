@@ -26,7 +26,7 @@ body {
 .container {
     max-width: 1200px;
     margin-inline: auto;
-    padding-inline: 29.5px,1.5rem;
+    padding-inline: min(5vw,1.5rem);
 }
 
 .hero {
@@ -133,6 +133,18 @@ a:not(btn) {
     background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 0.25s ease;
+}
+.logos-grid {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 1.5rem;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+}
+
+.logos {
+    border-bottom: 1px solid #e6e8eb;
+    border-top: 1px solid #e6e8eb;
 }
 
 .logo {
@@ -711,6 +723,15 @@ img {
 @media (min-width:768px) {
     .global-nav {
         display: block;
+    }
+    .logos-grid {
+        grid-template-columns: repeat(6,minmax(0,1fr));
+    }
+    .features-grid {
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+     .hamburger {
+        display: none;
     }
     .detail {
         grid-template-columns: 1.1fr 1fr;
