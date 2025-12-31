@@ -14,7 +14,6 @@ hamburger.addEventListener('click', () => {
      // ナビの表示切り替え
      globalNav.classList.toggle('is-open');    //--.globalNavに.is-openが付与されているかを判断し、.is-openの追加・削除を実施(if文でも対応可)
     });
-  
 
 //タブ切り替えコンポーネント実装
 //タブ切り替えコンポーネントに必要なidを取得
@@ -132,3 +131,26 @@ function openModal() {
       }
     });
   });
+
+  //ロゴリストの自動横スクロールの実装
+  const slider = document.querySelector(".logos-rail");   //--ロゴリストの自動横スクロールに必要なuiを取得
+  const speed = 0.5; //--ロゴが動くスピードを調整(数値を大きくすると速くなる)
+
+  // ロゴを複製して無限ループにする
+  slider.innerHTML += slider.innerHTML;   //--ulタグの複製を作成
+
+  let position = 0;    //--ロゴの位置を設定
+  const totalWidth = slider.scrollWidth / 2;   //--リセットをするタイミングを設定
+
+  function animate() {
+    position -= speed;     //--左に流すように設定(+は右に、-は左に)
+
+    if (Math.abs(position) >= totalWidth) {       //--ロゴ1セット分左に流したら
+      position = 0;          //--元の位置に戻す
+    }
+
+    slider.style.transform = `translateX(${position}px)`;     //--現在のpositionの値だけ横移動を実施
+    requestAnimationFrame(animate);      //--再度フレーム呼び出し
+  }
+
+  animate();   //--アニメーションの初期値を配置
